@@ -21,7 +21,6 @@ namespace ProjectERP
 		// 초기 대분류 load
 		private void Form2_Load()
 		{
-			DataGridView r = new DataGridView();
 			try
 			{
 				data_set = master.GetInstance().select_work_category("DISTINCT large_category");
