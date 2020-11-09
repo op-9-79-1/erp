@@ -31,6 +31,7 @@ namespace ProjectERP
         private void InitializeComponent()
         {
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.employeeTab = new System.Windows.Forms.TabPage();
 			this.tabControl2 = new System.Windows.Forms.TabControl();
@@ -77,22 +78,13 @@ namespace ProjectERP
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.workTab = new System.Windows.Forms.TabPage();
 			this.tabControl3 = new System.Windows.Forms.TabControl();
-			this.tabPage2 = new System.Windows.Forms.TabPage();
-			this.groupBox3 = new System.Windows.Forms.GroupBox();
-			this.button_small_revise = new System.Windows.Forms.Button();
-			this.button_small_plus = new System.Windows.Forms.Button();
-			this.button_small_del = new System.Windows.Forms.Button();
-			this.dataGridView_small_ct = new System.Windows.Forms.DataGridView();
-			this.groupBox2 = new System.Windows.Forms.GroupBox();
-			this.button_medium_revise = new System.Windows.Forms.Button();
-			this.button_medium_plus = new System.Windows.Forms.Button();
-			this.button_medium_del = new System.Windows.Forms.Button();
-			this.dataGridView_medium_ct = new System.Windows.Forms.DataGridView();
-			this.groupBox1 = new System.Windows.Forms.GroupBox();
-			this.button_large_revise = new System.Windows.Forms.Button();
-			this.button_large_plus = new System.Windows.Forms.Button();
-			this.button_large_del = new System.Windows.Forms.Button();
-			this.dataGridView_large_ct = new System.Windows.Forms.DataGridView();
+			this.tabPage_master = new System.Windows.Forms.TabPage();
+			this.button_Refresh = new System.Windows.Forms.Button();
+			this.groupBox4 = new System.Windows.Forms.GroupBox();
+			this.button_revise = new System.Windows.Forms.Button();
+			this.button_plus = new System.Windows.Forms.Button();
+			this.button_del = new System.Windows.Forms.Button();
+			this.dataGridView_master = new System.Windows.Forms.DataGridView();
 			this.divsionTab = new System.Windows.Forms.TabPage();
 			this.tabControl4 = new System.Windows.Forms.TabControl();
 			this.tabPage4 = new System.Windows.Forms.TabPage();
@@ -107,7 +99,6 @@ namespace ProjectERP
 			this.button9 = new System.Windows.Forms.Button();
 			this.textBox11 = new System.Windows.Forms.TextBox();
 			this.dataGridView8 = new System.Windows.Forms.DataGridView();
-			this.button_reload = new System.Windows.Forms.Button();
 			this.tabControl1.SuspendLayout();
 			this.employeeTab.SuspendLayout();
 			this.tabControl2.SuspendLayout();
@@ -119,13 +110,9 @@ namespace ProjectERP
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.workTab.SuspendLayout();
 			this.tabControl3.SuspendLayout();
-			this.tabPage2.SuspendLayout();
-			this.groupBox3.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView_small_ct)).BeginInit();
-			this.groupBox2.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView_medium_ct)).BeginInit();
-			this.groupBox1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView_large_ct)).BeginInit();
+			this.tabPage_master.SuspendLayout();
+			this.groupBox4.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView_master)).BeginInit();
 			this.divsionTab.SuspendLayout();
 			this.tabControl4.SuspendLayout();
 			this.tabPage4.SuspendLayout();
@@ -566,195 +553,95 @@ namespace ProjectERP
 			// 
 			// tabControl3
 			// 
-			this.tabControl3.Controls.Add(this.tabPage2);
+			this.tabControl3.Controls.Add(this.tabPage_master);
 			this.tabControl3.Location = new System.Drawing.Point(-4, 0);
 			this.tabControl3.Name = "tabControl3";
 			this.tabControl3.SelectedIndex = 0;
 			this.tabControl3.Size = new System.Drawing.Size(795, 428);
 			this.tabControl3.TabIndex = 0;
 			// 
-			// tabPage2
+			// tabPage_master
 			// 
-			this.tabPage2.Controls.Add(this.button_reload);
-			this.tabPage2.Controls.Add(this.groupBox3);
-			this.tabPage2.Controls.Add(this.groupBox2);
-			this.tabPage2.Controls.Add(this.groupBox1);
-			this.tabPage2.Location = new System.Drawing.Point(4, 22);
-			this.tabPage2.Name = "tabPage2";
-			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage2.Size = new System.Drawing.Size(787, 402);
-			this.tabPage2.TabIndex = 1;
-			this.tabPage2.Text = "수정";
-			this.tabPage2.UseVisualStyleBackColor = true;
+			this.tabPage_master.Controls.Add(this.button_Refresh);
+			this.tabPage_master.Controls.Add(this.groupBox4);
+			this.tabPage_master.Controls.Add(this.button_del);
+			this.tabPage_master.Location = new System.Drawing.Point(4, 22);
+			this.tabPage_master.Name = "tabPage_master";
+			this.tabPage_master.Size = new System.Drawing.Size(787, 402);
+			this.tabPage_master.TabIndex = 2;
+			this.tabPage_master.Text = "수정";
+			this.tabPage_master.UseVisualStyleBackColor = true;
 			// 
-			// groupBox3
+			// button_Refresh
 			// 
-			this.groupBox3.Controls.Add(this.button_small_revise);
-			this.groupBox3.Controls.Add(this.button_small_plus);
-			this.groupBox3.Controls.Add(this.button_small_del);
-			this.groupBox3.Controls.Add(this.dataGridView_small_ct);
-			this.groupBox3.Location = new System.Drawing.Point(478, 33);
-			this.groupBox3.Name = "groupBox3";
-			this.groupBox3.Size = new System.Drawing.Size(203, 338);
-			this.groupBox3.TabIndex = 7;
-			this.groupBox3.TabStop = false;
-			this.groupBox3.Text = "소분류";
+			this.button_Refresh.Location = new System.Drawing.Point(705, 3);
+			this.button_Refresh.Name = "button_Refresh";
+			this.button_Refresh.Size = new System.Drawing.Size(75, 23);
+			this.button_Refresh.TabIndex = 7;
+			this.button_Refresh.Text = "새로고침";
+			this.button_Refresh.UseVisualStyleBackColor = true;
+			this.button_Refresh.Click += new System.EventHandler(this.button_Refresh_Click);
 			// 
-			// button_small_revise
+			// groupBox4
 			// 
-			this.button_small_revise.BackColor = System.Drawing.Color.White;
-			this.button_small_revise.BackgroundImage = global::ProjectERP.Properties.Resources.revise;
-			this.button_small_revise.Image = ((System.Drawing.Image)(resources.GetObject("button_small_revise.Image")));
-			this.button_small_revise.Location = new System.Drawing.Point(71, 20);
-			this.button_small_revise.Name = "button_small_revise";
-			this.button_small_revise.Size = new System.Drawing.Size(38, 26);
-			this.button_small_revise.TabIndex = 6;
-			this.button_small_revise.UseVisualStyleBackColor = false;
-			this.button_small_revise.Click += new System.EventHandler(this.button_small_revise_Click);
+			this.groupBox4.Controls.Add(this.button_revise);
+			this.groupBox4.Controls.Add(this.button_plus);
+			this.groupBox4.Controls.Add(this.dataGridView_master);
+			this.groupBox4.Location = new System.Drawing.Point(40, 30);
+			this.groupBox4.Name = "groupBox4";
+			this.groupBox4.Size = new System.Drawing.Size(670, 338);
+			this.groupBox4.TabIndex = 6;
+			this.groupBox4.TabStop = false;
+			this.groupBox4.Text = "업무 마스터";
 			// 
-			// button_small_plus
+			// button_revise
 			// 
-			this.button_small_plus.BackColor = System.Drawing.Color.White;
-			this.button_small_plus.Image = ((System.Drawing.Image)(resources.GetObject("button_small_plus.Image")));
-			this.button_small_plus.Location = new System.Drawing.Point(115, 20);
-			this.button_small_plus.Name = "button_small_plus";
-			this.button_small_plus.Size = new System.Drawing.Size(38, 26);
-			this.button_small_plus.TabIndex = 3;
-			this.button_small_plus.UseVisualStyleBackColor = false;
-			this.button_small_plus.Click += new System.EventHandler(this.button_small_plus_Click);
+			this.button_revise.BackColor = System.Drawing.Color.White;
+			this.button_revise.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.button_revise.Image = ((System.Drawing.Image)(resources.GetObject("button_revise.Image")));
+			this.button_revise.Location = new System.Drawing.Point(582, 20);
+			this.button_revise.Name = "button_revise";
+			this.button_revise.Size = new System.Drawing.Size(38, 26);
+			this.button_revise.TabIndex = 4;
+			this.button_revise.UseVisualStyleBackColor = false;
+			this.button_revise.Click += new System.EventHandler(this.button_revise_Click);
 			// 
-			// button_small_del
+			// button_plus
 			// 
-			this.button_small_del.BackColor = System.Drawing.Color.White;
-			this.button_small_del.Image = ((System.Drawing.Image)(resources.GetObject("button_small_del.Image")));
-			this.button_small_del.Location = new System.Drawing.Point(159, 20);
-			this.button_small_del.Name = "button_small_del";
-			this.button_small_del.Size = new System.Drawing.Size(38, 26);
-			this.button_small_del.TabIndex = 2;
-			this.button_small_del.UseVisualStyleBackColor = false;
-			this.button_small_del.Click += new System.EventHandler(this.button_small_del_Click);
+			this.button_plus.BackColor = System.Drawing.Color.White;
+			this.button_plus.Image = ((System.Drawing.Image)(resources.GetObject("button_plus.Image")));
+			this.button_plus.Location = new System.Drawing.Point(626, 20);
+			this.button_plus.Name = "button_plus";
+			this.button_plus.Size = new System.Drawing.Size(38, 26);
+			this.button_plus.TabIndex = 3;
+			this.button_plus.UseVisualStyleBackColor = false;
+			this.button_plus.Click += new System.EventHandler(this.button_plus_Click);
 			// 
-			// dataGridView_small_ct
+			// button_del
 			// 
-			this.dataGridView_small_ct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView_small_ct.Location = new System.Drawing.Point(6, 52);
-			this.dataGridView_small_ct.Name = "dataGridView_small_ct";
-			this.dataGridView_small_ct.RowTemplate.Height = 23;
-			this.dataGridView_small_ct.Size = new System.Drawing.Size(191, 284);
-			this.dataGridView_small_ct.TabIndex = 0;
+			this.button_del.BackColor = System.Drawing.Color.White;
+			this.button_del.Image = ((System.Drawing.Image)(resources.GetObject("button_del.Image")));
+			this.button_del.Location = new System.Drawing.Point(731, 82);
+			this.button_del.Name = "button_del";
+			this.button_del.Size = new System.Drawing.Size(38, 26);
+			this.button_del.TabIndex = 2;
+			this.button_del.UseVisualStyleBackColor = false;
+			this.button_del.Visible = false;
+			this.button_del.Click += new System.EventHandler(this.button_del_Click);
 			// 
-			// groupBox2
+			// dataGridView_master
 			// 
-			this.groupBox2.Controls.Add(this.button_medium_revise);
-			this.groupBox2.Controls.Add(this.button_medium_plus);
-			this.groupBox2.Controls.Add(this.button_medium_del);
-			this.groupBox2.Controls.Add(this.dataGridView_medium_ct);
-			this.groupBox2.Location = new System.Drawing.Point(269, 35);
-			this.groupBox2.Name = "groupBox2";
-			this.groupBox2.Size = new System.Drawing.Size(203, 338);
-			this.groupBox2.TabIndex = 6;
-			this.groupBox2.TabStop = false;
-			this.groupBox2.Text = "중분류";
-			// 
-			// button_medium_revise
-			// 
-			this.button_medium_revise.BackColor = System.Drawing.Color.White;
-			this.button_medium_revise.Image = ((System.Drawing.Image)(resources.GetObject("button_medium_revise.Image")));
-			this.button_medium_revise.Location = new System.Drawing.Point(71, 20);
-			this.button_medium_revise.Name = "button_medium_revise";
-			this.button_medium_revise.Size = new System.Drawing.Size(38, 26);
-			this.button_medium_revise.TabIndex = 5;
-			this.button_medium_revise.UseVisualStyleBackColor = false;
-			this.button_medium_revise.Click += new System.EventHandler(this.button_medium_revise_Click);
-			// 
-			// button_medium_plus
-			// 
-			this.button_medium_plus.BackColor = System.Drawing.Color.White;
-			this.button_medium_plus.Image = ((System.Drawing.Image)(resources.GetObject("button_medium_plus.Image")));
-			this.button_medium_plus.Location = new System.Drawing.Point(115, 20);
-			this.button_medium_plus.Name = "button_medium_plus";
-			this.button_medium_plus.Size = new System.Drawing.Size(38, 26);
-			this.button_medium_plus.TabIndex = 3;
-			this.button_medium_plus.UseVisualStyleBackColor = false;
-			this.button_medium_plus.Click += new System.EventHandler(this.button_medium_plus_Click);
-			// 
-			// button_medium_del
-			// 
-			this.button_medium_del.BackColor = System.Drawing.Color.White;
-			this.button_medium_del.Image = ((System.Drawing.Image)(resources.GetObject("button_medium_del.Image")));
-			this.button_medium_del.Location = new System.Drawing.Point(159, 20);
-			this.button_medium_del.Name = "button_medium_del";
-			this.button_medium_del.Size = new System.Drawing.Size(38, 26);
-			this.button_medium_del.TabIndex = 2;
-			this.button_medium_del.UseVisualStyleBackColor = false;
-			this.button_medium_del.Click += new System.EventHandler(this.button_medium_del_Click);
-			// 
-			// dataGridView_medium_ct
-			// 
-			this.dataGridView_medium_ct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView_medium_ct.Location = new System.Drawing.Point(6, 52);
-			this.dataGridView_medium_ct.Name = "dataGridView_medium_ct";
-			this.dataGridView_medium_ct.RowTemplate.Height = 23;
-			this.dataGridView_medium_ct.Size = new System.Drawing.Size(191, 284);
-			this.dataGridView_medium_ct.TabIndex = 0;
-			this.dataGridView_medium_ct.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_medium_ct_CellDoubleClick);
-			// 
-			// groupBox1
-			// 
-			this.groupBox1.Controls.Add(this.button_large_revise);
-			this.groupBox1.Controls.Add(this.button_large_plus);
-			this.groupBox1.Controls.Add(this.button_large_del);
-			this.groupBox1.Controls.Add(this.dataGridView_large_ct);
-			this.groupBox1.Location = new System.Drawing.Point(60, 35);
-			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(203, 338);
-			this.groupBox1.TabIndex = 5;
-			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "대분류";
-			// 
-			// button_large_revise
-			// 
-			this.button_large_revise.BackColor = System.Drawing.Color.White;
-			this.button_large_revise.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.button_large_revise.Image = ((System.Drawing.Image)(resources.GetObject("button_large_revise.Image")));
-			this.button_large_revise.Location = new System.Drawing.Point(71, 20);
-			this.button_large_revise.Name = "button_large_revise";
-			this.button_large_revise.Size = new System.Drawing.Size(38, 26);
-			this.button_large_revise.TabIndex = 4;
-			this.button_large_revise.UseVisualStyleBackColor = false;
-			this.button_large_revise.Click += new System.EventHandler(this.button_large_revise_Click);
-			// 
-			// button_large_plus
-			// 
-			this.button_large_plus.BackColor = System.Drawing.Color.White;
-			this.button_large_plus.Image = ((System.Drawing.Image)(resources.GetObject("button_large_plus.Image")));
-			this.button_large_plus.Location = new System.Drawing.Point(115, 20);
-			this.button_large_plus.Name = "button_large_plus";
-			this.button_large_plus.Size = new System.Drawing.Size(38, 26);
-			this.button_large_plus.TabIndex = 3;
-			this.button_large_plus.UseVisualStyleBackColor = false;
-			this.button_large_plus.Click += new System.EventHandler(this.button_large_plus_Click);
-			// 
-			// button_large_del
-			// 
-			this.button_large_del.BackColor = System.Drawing.Color.White;
-			this.button_large_del.Image = ((System.Drawing.Image)(resources.GetObject("button_large_del.Image")));
-			this.button_large_del.Location = new System.Drawing.Point(159, 20);
-			this.button_large_del.Name = "button_large_del";
-			this.button_large_del.Size = new System.Drawing.Size(38, 26);
-			this.button_large_del.TabIndex = 2;
-			this.button_large_del.UseVisualStyleBackColor = false;
-			this.button_large_del.Click += new System.EventHandler(this.button_large_del_Click);
-			// 
-			// dataGridView_large_ct
-			// 
-			this.dataGridView_large_ct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView_large_ct.Location = new System.Drawing.Point(6, 52);
-			this.dataGridView_large_ct.Name = "dataGridView_large_ct";
-			this.dataGridView_large_ct.RowTemplate.Height = 23;
-			this.dataGridView_large_ct.Size = new System.Drawing.Size(191, 284);
-			this.dataGridView_large_ct.TabIndex = 0;
-			this.dataGridView_large_ct.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_large_ct_CellDoubleClick);
+			dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+			this.dataGridView_master.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+			this.dataGridView_master.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridView_master.Location = new System.Drawing.Point(6, 52);
+			this.dataGridView_master.MultiSelect = false;
+			this.dataGridView_master.Name = "dataGridView_master";
+			this.dataGridView_master.RowTemplate.Height = 23;
+			this.dataGridView_master.Size = new System.Drawing.Size(658, 284);
+			this.dataGridView_master.TabIndex = 0;
+			this.dataGridView_master.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridView_master_UserDeletedRow);
+			this.dataGridView_master.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView_master_UserDeletingRow);
 			// 
 			// divsionTab
 			// 
@@ -890,16 +777,6 @@ namespace ProjectERP
 			this.dataGridView8.Size = new System.Drawing.Size(455, 190);
 			this.dataGridView8.TabIndex = 3;
 			// 
-			// button_reload
-			// 
-			this.button_reload.Location = new System.Drawing.Point(705, 6);
-			this.button_reload.Name = "button_reload";
-			this.button_reload.Size = new System.Drawing.Size(75, 23);
-			this.button_reload.TabIndex = 8;
-			this.button_reload.Text = "새로고침";
-			this.button_reload.UseVisualStyleBackColor = true;
-			this.button_reload.Click += new System.EventHandler(this.button4_Click);
-			// 
 			// Form2
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -922,13 +799,9 @@ namespace ProjectERP
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			this.workTab.ResumeLayout(false);
 			this.tabControl3.ResumeLayout(false);
-			this.tabPage2.ResumeLayout(false);
-			this.groupBox3.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView_small_ct)).EndInit();
-			this.groupBox2.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView_medium_ct)).EndInit();
-			this.groupBox1.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView_large_ct)).EndInit();
+			this.tabPage_master.ResumeLayout(false);
+			this.groupBox4.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView_master)).EndInit();
 			this.divsionTab.ResumeLayout(false);
 			this.tabControl4.ResumeLayout(false);
 			this.tabPage4.ResumeLayout(false);
@@ -1006,22 +879,12 @@ namespace ProjectERP
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.DataGridView dataGridView8;
 		private System.Windows.Forms.TabControl tabControl3;
-		private System.Windows.Forms.TabPage tabPage2;
-		private System.Windows.Forms.DataGridView dataGridView_large_ct;
-		private System.Windows.Forms.GroupBox groupBox3;
-		private System.Windows.Forms.Button button_small_plus;
-		private System.Windows.Forms.Button button_small_del;
-		private System.Windows.Forms.DataGridView dataGridView_small_ct;
-		private System.Windows.Forms.GroupBox groupBox2;
-		private System.Windows.Forms.Button button_medium_plus;
-		private System.Windows.Forms.Button button_medium_del;
-		private System.Windows.Forms.DataGridView dataGridView_medium_ct;
-		private System.Windows.Forms.GroupBox groupBox1;
-		private System.Windows.Forms.Button button_large_plus;
-		private System.Windows.Forms.Button button_large_del;
-		private System.Windows.Forms.Button button_small_revise;
-		private System.Windows.Forms.Button button_medium_revise;
-		private System.Windows.Forms.Button button_large_revise;
-		private System.Windows.Forms.Button button_reload;
+		private System.Windows.Forms.TabPage tabPage_master;
+		private System.Windows.Forms.GroupBox groupBox4;
+		private System.Windows.Forms.Button button_revise;
+		private System.Windows.Forms.Button button_plus;
+		private System.Windows.Forms.Button button_del;
+		private System.Windows.Forms.DataGridView dataGridView_master;
+		private System.Windows.Forms.Button button_Refresh;
 	}
 }
